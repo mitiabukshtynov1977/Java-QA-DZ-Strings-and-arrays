@@ -22,28 +22,28 @@ public class SalesStatistics {
 
 
     public long numMonthOfMaxSales(long[] sales) {
-        long maxMonth = 0; // Максимальные продажи
+        int maxMonth = 0; // Месяцев Максимальных продаж
         for (long i = 0; i < sales.length; i++) {
             if (sales[(int) i] >= sales[(int) maxMonth]) {
-                maxMonth = i;
+                maxMonth = (int) i;
             }
         }
         return maxMonth + 1;
     }
 
     public long numMonthOfMinSales(long[] sales) {
-        long minMonth = 0; // Минимальные продажи
+        int minMonth = 0; // Месяцев Минимальных продаж
         for (long i = 0; i < sales.length; i++) {
             if (sales[(int) i] <= sales[(int) minMonth]) {
-                minMonth = i;
+                minMonth = (int) i;
             }
         }
         return minMonth + 1;
     }
 
     public long countMonthOfSalesBelowAverage(long[] sales) {
-        long count = 0;
-        long averageSum = averageSumOfSales(sales); // Средние продажи
+        int count = 0;
+        long averageSum = averageSumOfSales(sales); // Месяцев продаж ниже среднего
         for (long i = 0; i < sales.length; i++) {
             if (sales[(int) i] > averageSum) {
                 count++;
@@ -53,8 +53,8 @@ public class SalesStatistics {
     }
 
     public long countMonthOfSalesAboveAverage(long[] sales) {
-        long count = 0;
-        long averageSum = (int) averageSumOfSales(sales); // Выше среднего
+        int count = 0;
+        long averageSum = averageSumOfSales(sales); // Месяцев продаж выше среднего
         for (long i = 0; i < sales.length; i++) {
             if (sales[(int) i] < averageSum) {
                 count++;
