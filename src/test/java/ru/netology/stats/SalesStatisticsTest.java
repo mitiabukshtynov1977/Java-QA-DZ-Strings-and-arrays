@@ -8,14 +8,14 @@ public class SalesStatisticsTest {
 
 
     SalesStatistics service = new SalesStatistics();
-    long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
     public void shouldCalcSumOfSales() {
 
 
-        long actual = service.sumOfSales(sales);
-        long expected = 180;
+        int actual = service.sumOfSales(sales);
+        int expected = 180;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -23,8 +23,8 @@ public class SalesStatisticsTest {
     @Test
     public void countCalcAverageSumOfSales() {
 
-        long actual = service.averageSumOfSales(sales);
-        long expected = 15;
+        int actual = service.averageSumOfSales(sales);
+        int expected = 15;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -32,8 +32,8 @@ public class SalesStatisticsTest {
     @Test
     public void shouldCalcNumMonthOfMaxSales() {
 
-        long actual = service.numMonthOfMaxSales(sales);
-        long expected = 8;
+        int actual = service.numMonthOfMaxSales(sales);
+        int expected = 8;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -41,8 +41,8 @@ public class SalesStatisticsTest {
     @Test
     public void shouldCalcNumMonthOfMinSales() {
 
-        long actual = service.numMonthOfMinSales(sales);
-        long expected = 9;
+        int actual = service.numMonthOfMinSales(sales);
+        int expected = 9;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -50,8 +50,8 @@ public class SalesStatisticsTest {
     @Test
     public void shouldCalcCountMonthOfSalesBelowAverage() {
 
-        long actual = service.countMonthOfSalesBelowAverage(sales);
-        long expected = 5;
+        int actual = service.countMonthOfSalesBelowAverage(sales);
+        int expected = 5;
 
         Assertions.assertEquals(expected, actual);
     }
@@ -59,8 +59,8 @@ public class SalesStatisticsTest {
     @Test
     public void shouldCalcCountMonthOfSalesAboveAverage() {
 
-        long actual = service.countMonthOfSalesAboveAverage(sales);
-        long expected = 5;
+        int actual = service.countMonthOfSalesAboveAverage(sales);
+        int expected = 5;
 
         Assertions.assertEquals(expected, actual);
     }
