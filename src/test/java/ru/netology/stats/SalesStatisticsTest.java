@@ -14,7 +14,7 @@ public class SalesStatisticsTest {
     public void shouldCalcSumOfSales() {
 
 
-        int actual = service.sumOfSales(sales);
+        long actual = service.sumOfSales(sales);
         int expected = 180;
 
         Assertions.assertEquals(expected, actual);
@@ -23,7 +23,7 @@ public class SalesStatisticsTest {
     @Test
     public void countCalcAverageSumOfSales() {
 
-        int actual = service.averageSumOfSales(sales);
+        long actual = service.averageSumOfSales(sales);
         int expected = 15;
 
         Assertions.assertEquals(expected, actual);
