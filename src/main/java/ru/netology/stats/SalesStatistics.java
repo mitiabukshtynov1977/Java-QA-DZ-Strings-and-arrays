@@ -2,20 +2,20 @@ package ru.netology.stats;
 
 public class SalesStatistics {
 
-    public long sumOfSales(int[] sales) {
+    public long sumOfSales(long[] sales) {
         long sum = 0; // Общие продажи
-        for (int sale : sales) {
+        for (long sale : sales) {
             sum += sale;
         }
         return sum;
     }
 
-    public long averageSumOfSales(int[] sales) {
+    public long averageSumOfSales(long[] sales) {
         long sum = sumOfSales(sales);
         return sum / sales.length; // Средние продажи
     }
 
-    public int numMonthOfMaxSales(int[] sales) {
+    public int numMonthOfMaxSales(long[] sales) {
         int maxMonth = 0; // Месяц максимальных продаж
         for (int i = 1; i < sales.length; i++) {
             if (sales[i] > sales[maxMonth]) {
@@ -25,7 +25,7 @@ public class SalesStatistics {
         return maxMonth + 1;
     }
 
-    public int numMonthOfMinSales(int[] sales) {
+    public int numMonthOfMinSales(long[] sales) {
         int minMonth = 0; // Месяц минимальных продаж
         for (int i = 1; i < sales.length; i++) {
             if (sales[i] < sales[minMonth]) {
@@ -35,10 +35,10 @@ public class SalesStatistics {
         return minMonth + 1;
     }
 
-    public int countMonthOfSalesBelowAverage(int[] sales) {
+    public int countMonthOfSalesBelowAverage(long[] sales) {
         int count = 0;
-        long averageSum = averageSumOfSales(sales); // Месяцы продаж ниже среднего
-        for (int sale : sales) {
+        int averageSum = (int) averageSumOfSales(sales); // Месяцы продаж ниже среднего
+        for (long sale : sales) {
             if (sale < averageSum) {
                 count++;
             }
@@ -46,10 +46,10 @@ public class SalesStatistics {
         return count;
     }
 
-    public int countMonthOfSalesAboveAverage(int[] sales) {
+    public int countMonthOfSalesAboveAverage(long[] sales) {
         int count = 0;
-        long averageSum = averageSumOfSales(sales); // Месяцы продаж выше среднего
-        for (int sale : sales) {
+        int averageSum = (int) averageSumOfSales(sales); // Месяцы продаж выше среднего
+        for (long sale : sales) {
             if (sale > averageSum) {
                 count++;
             }
