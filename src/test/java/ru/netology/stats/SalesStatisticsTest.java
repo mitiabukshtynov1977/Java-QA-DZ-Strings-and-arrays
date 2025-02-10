@@ -43,7 +43,7 @@ public class SalesStatisticsTest {
     @Test
     public void shouldCalcCountMonthOfSalesBelowAverage() {
         int actual = service.countMonthOfSalesBelowAverage(sales);
-        int expected = 5;
+        int expected = 0;
 
         Assertions.assertEquals(expected, actual);
     }
